@@ -1,0 +1,51 @@
+.wrapper
+  .chat-side
+    .chat-side__header
+      .chat-side__header__box
+        %p.chat-side__header__box__user-name testUser
+        %ul.chat-side__header__box__menu
+          %li.chat-side__header__box__menu__new-group
+            = link_to "#" do
+              = fa_icon "edit"
+          %li.chat-side__header__box__menu__edit-user
+            = link_to "#" do
+              = fa_icon "cog"
+    .chat-side__groups
+      = link_to "#" do
+        .chat-side__groups__group
+          %p.chat-side__groups__group__name testGroupA
+          %p.chat-side__groups__group__latest-message testLastMessage1
+      = link_to "#" do
+        .chat-side__groups__group
+          %p.chat-side__groups__group__name testGroupB
+          %p.chat-side__groups__group__latest-message testLastMessage2
+  .chat-main
+    .chat-main__header
+      .chat-main__header__left-box
+        %h2.chat-main__header__left-box__current-group testGroupA
+        %ul.chat-main__header__left-box__member-list
+          Member：
+          %li.chat-main__header__left-box__member-list__member testUser
+          %li.chat-main__header__left-box__member-list__member testA
+          %li.chat-main__header__left-box__member-list__member testB
+      = link_to "#" do
+        .chat-main__header__edit-btn Edit
+    .chat-main__messages
+      .chat-main__messages__message
+        .chat-main__messages__message__upper-info
+          %p.chat-main__messages__message__upper-info__talker testTalkerA
+          %p.chat-main__messages__message__upper-info__date testDateA
+        .chat-main__messages__message__text testTextA
+      .chat-main__messages__message
+        .chat-main__messages__message__upper-info
+          %p.chat-main__messages__message__upper-info__talker testTalkerB
+          %p.chat-main__messages__message__upper-info__date testDateB
+        .chat-main__messages__message__text testTextB
+    .chat-main__form
+      .chat-main__form__new-message
+        .chat-main__form__new-message__input-box
+          %input.chat-main__form__new-message__input-box__text{ placeholder: "type a message"}
+          %label.chat-main__form__new-message__input-box__image{ for: "message_image" }
+            = fa_icon "image"
+            %input.chat-main__form__new-message__input-box__image__file{ type: "file", id: "message_image" }
+        %input.chat-main__form__new-message__submit-btn{ type: "submit", value: "Send" }
