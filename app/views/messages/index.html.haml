@@ -2,7 +2,8 @@
   .chat-side
     .chat-side__header
       .chat-side__header__box
-        %p.chat-side__header__box__user-name testUser
+        %p.chat-side__header__box__user-name
+          = current_user.name
         %ul.chat-side__header__box__menu
           %li.chat-side__header__box__menu__new-group
             = link_to "#" do
