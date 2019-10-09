@@ -6,7 +6,7 @@
           = current_user.name
         %ul.chat-side__header__box__menu
           %li.chat-side__header__box__menu__new-group
-            = link_to "#" do
+            = link_to new_group_path do
               = fa_icon "edit"
           %li.chat-side__header__box__menu__edit-user
             = link_to edit_user_path(current_user) do
@@ -29,7 +29,7 @@
           %li.chat-main__header__left-box__member-list__member testUser
           %li.chat-main__header__left-box__member-list__member testA
           %li.chat-main__header__left-box__member-list__member testB
-      = link_to "#" do
+      = link_to edit_group_path(current_user) do
         .chat-main__header__edit-btn Edit
     .chat-main__messages
       .chat-main__messages__message
