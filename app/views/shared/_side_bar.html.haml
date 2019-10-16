@@ -16,4 +16,5 @@
         .chat-side__groups__group
           %p.chat-side__groups__group__name
             = group.name
-          %p.chat-side__groups__group__latest-message testLastMessage1
+          %p.chat-side__groups__group__latest-message
+            = group.show_last_message
